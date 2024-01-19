@@ -74,7 +74,7 @@ function TodoApp({ initialTodos }) {
               initialFormData={{
                 title: "",
                 description: "",
-                priority: "1"}}
+                priority: "1"}} /* FIXME: be a number */
               handleSave={create}
             />
           </section>
