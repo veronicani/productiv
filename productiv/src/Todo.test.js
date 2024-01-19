@@ -8,7 +8,7 @@ const TEST_TODO = {
   description: 'Test Description',
   priority: 1};
 
-describe("productiv app", function () {
+describe("Todo", function () {
   it("renders without crashing", function () {
     render(<Todo todo={TEST_TODO}/>);
   });
@@ -29,5 +29,8 @@ describe("productiv app", function () {
     expect(result.queryByText("(priority: 1)")).toBeInTheDocument();
   });
 
-  //TODO: SNAPSHOT
+  it("matches snapshot", function() {
+    const { container } = render(<Todo todo={TEST_TODO}/>);
+    expect(container).toMatchSnapshot();
+  })
 });
