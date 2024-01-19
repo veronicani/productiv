@@ -19,7 +19,7 @@ import EditableTodoList from "./EditableTodoList";
 function TodoApp({ initialTodos }) {
   const [todos, setTodos] = useState(initialTodos);
 
-  console.log("TodoApp state -> initialTodos: ", initialTodos);
+  console.log("TodoApp state -> todos: ", todos);
 
   /** add a new todo to list */
   function create(newTodo) {
@@ -74,7 +74,7 @@ function TodoApp({ initialTodos }) {
               initialFormData={{
                 title: "",
                 description: "",
-                priority: "1"}} /* FIXME: be a number */
+                priority: 1}}
               handleSave={create}
             />
           </section>

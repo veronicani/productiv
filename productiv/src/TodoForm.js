@@ -18,7 +18,7 @@ function TodoForm({ initialFormData, handleSave }) {
   console.log("ToDoForm state -> formData: ", formData);
 
   /** Update form input. */
-  function handleChange(evt) { //TODO: make priority a number
+  function handleChange(evt) {
     const { name, value } = evt.target;
     setFormData(fData => ({...fData, [name]: value }));
   }
@@ -26,6 +26,7 @@ function TodoForm({ initialFormData, handleSave }) {
   /** Call parent function and clear form. */
   function handleSubmit(evt) {
     evt.preventDefault();
+    formData.priority = Number(formData.priority);
     handleSave(formData);
     setFormData(initialFormData);
   }
