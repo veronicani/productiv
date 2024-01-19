@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 
 /** Form for adding.
- * 
+ *
  * NOTE: is state not mentioned here, b/c it's a form?
  *
  * Props:
@@ -15,15 +15,15 @@ import React, { useState } from "react";
 function TodoForm({ initialFormData, handleSave}) {
   const [formData, setFormData] = useState(initialFormData);
   console.log("ToDoForm state -> formData: ", formData);
-  
+
   /** Update form input. */
-  function handleChange(evt) { 
+  function handleChange(evt) {
     const { name, value } = evt.target;
     setFormData((fData) => ({...fData, [name]: value }));
   }
 
   /** Call parent function and clear form. */
-  function handleSubmit(evt) { 
+  function handleSubmit(evt) {
     evt.preventDefault();
     handleSave(formData);
     setFormData(initialFormData);
