@@ -3,7 +3,8 @@ import React, { useState } from "react";
 
 /** Form for adding.
  *
- * NOTE: is state not mentioned here, b/c it's a form?
+ * state :
+ * -FormData
  *
  * Props:
  * - initialFormData
