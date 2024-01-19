@@ -30,13 +30,14 @@ function EditableTodo({ todo, update, remove }) {
     update({ id: todo.id, ...formData });
     setIsEditing(false);
 
-    //this indicates that we do not need to depend on the previous state as the previous state should always be true in this moment.
+    //this indicates that we do not need to depend on the previous state
+    // as the previous state should always be true in this moment.
   }
 
   return (
     <div className="EditableTodo">
       {isEditing
-        ? <TodoForm initialFormData= {todo} handleSave={handleSave}/>
+        ? <TodoForm initialFormData={todo} handleSave={handleSave}/>
         : (<div className="mb-3">
           <div className="float-end text-sm-end">
             <button
