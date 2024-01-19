@@ -61,7 +61,6 @@ function TodoApp({ initialTodos }) {
           }
         </div>
 
-
         <div className="col-md-6">
           {todos.length > 0 && <section
             className="mb-4">
@@ -75,7 +74,7 @@ function TodoApp({ initialTodos }) {
               initialFormData={{
                 title: "",
                 description: "",
-                priority: ""}}
+                priority: "1"}}
               handleSave={create}
             />
           </section>

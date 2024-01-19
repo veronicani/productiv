@@ -10,7 +10,7 @@ import Todo from "./Todo";
  * TodoApp -> TopTodo
  */
 
-function TopTodo({todos}) {
+function TopTodo({ todos }) {
   console.log("TopTodo todos: ", todos);
   // lowest-priority # is the highest priority
   let top = todos.reduce(
