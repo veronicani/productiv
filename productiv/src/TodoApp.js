@@ -19,6 +19,8 @@ import EditableTodoList from "./EditableTodoList";
 function TodoApp({ initialTodos }) {
   const [todos, setTodos] = useState(initialTodos);
 
+  console.log("TodoApp state -> initialTodos: ", initialTodos);
+
   /** add a new todo to list */
   function create(newTodo) {
     newTodo.id = uuid();
